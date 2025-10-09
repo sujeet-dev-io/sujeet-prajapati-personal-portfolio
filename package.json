@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "npx tailwindcss -c tailwind.config.js -i ./Css/input.css -o ./Css/output.css --minify",
-    "dev:css": "npx tailwindcss -c tailwind.config.js -i ./Css/input.css -o ./Css/output.css --watch"
-  },
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "build:css": "npx tailwindcss -c tailwind.config.js -i ./input.css -o ./output.css --minify",
+  "dev:css": "npx tailwindcss -c tailwind.config.js -i ./input.css -o ./output.css --watch"
+},
   "author": "",
   "license": "ISC",
   "devDependencies": {
