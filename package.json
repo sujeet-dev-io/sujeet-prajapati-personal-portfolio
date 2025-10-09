@@ -1,0 +1,19 @@
+{
+  "name": "full-jacob-portfolio-codehal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -c tailwind.config.js -i ./Css/input.css -o ./Css/output.css --minify",
+    "dev:css": "npx tailwindcss -c tailwind.config.js -i ./Css/input.css -o ./Css/output.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "flowbite": "^3.1.2"
+  }
+}

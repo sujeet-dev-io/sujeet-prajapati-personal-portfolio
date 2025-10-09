@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="/website/css/uicons-outline-rounded" rel="stylesheet">
+    <link rel="icon" href="images/fave.webp" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-dRmVbJHQvD0TkyoSeFK3FZgkPQWvDb7lEd7AfakRU+yjaIlWoFYF+lROb9GVyQe/Y4UjUDe7v96C+6hxL8kYbw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+
+
+    <title>sujeet.dev.io</title>
+
+</head>
+
+<body class="bg-bgColor text-textColor">
+
+    <!--HEADER-->
+    <!--HEADER-->
+    <header
+        class="transition duration-500 fixed top-0 left-0 w-full px-5 md:px-24 py-5 flex items-center justify-between z-50">
+        <div class="text-1.5xl font-semibold">
+            <a href="https://github.com/sujeet-dev-io" class="scramble" style="color: #0ef;">sujeet.dev.io</a>
+        </div>
+
+        <div id="menuIcon" class="md:absolute md:-left-10 text-3xl bx bx-menu"></div>
+
+        <nav id="navBar"
+            class="md:flex md:p-0 md:static md:items-center md:justify-end md:left-0 md:top-0 md:bg-transparent md:shadow-none text-lg font-medium gap-7 absolute top-full -left-full w-full p-5 shadow-lg bg-mainColor transition-all duration-500 ease-out z-10">
+            <a class="active hover:text-mainColor transition" href="#home">Home</a>
+            <a class="hover:text-mainColor transition block mt-5 md:mt-0" href="#about">About</a>
+            <a class="hover:text-mainColor transition block mt-5 md:mt-0" href="#education">Career Snapshot </a>
+            <a class="hover:text-mainColor transition block mt-5 md:mt-0" href="#skills">Skills</a>
+            <a class="hover:text-mainColor transition block mt-5 md:mt-0" href="#contact">Contact</a>
+            <span class="absolute top-0 -left-full w-full h-full bg-bgColor -z-10 transition-all duration-500"></span>
+        </nav>
+    </header>
+
+    <!--HOME SECTION-->
+    <section id="home" class="flex items-center justify-center md:justify-start px-5 md:px-24 relative">
+
+        <div class="md:max-w-[40rem] text-center md:text-start relative z-10">
+            <!-- INTRODUCTION -->
+            <h3 class="font-bold text-2xl ">Hi, I'm <span class="text-mainColor" style="color: #0ef;"
+                    id="textAnimate">Sujeet
+                    Prajapati</span></h3>
+
+            <h1 class="text-start w-full">
+                <a href="" class="typewrite" data-period="2000"
+                    data-type='["Java FullStack Developer", "Docker & Kubernetes Enthusiast", "Microservices Architecture Design", "Clean Code & Scalable Systems", "Code Quality & System Design" ]'>
+                    <span class="wrap"></span>
+                </a>
+            </h1>
+            <p class="my-7" style="color: #2acedd;" id="pAnimate">
+                Passionate Java Full Stack Developer with comprehensive exposure to end-to-end system design and
+                development. Proficient in microservices, React-Vite, Docker, and Kubernetes, focusing on scalable,
+                maintainable, production-grade solutions.
+            </p>
+            <!-- BUTTONS -->
+            <div class="flex justify-center md:justify-start gap-14 font-semibold text-xl">
+                <div
+                    class="bg-mainColor border-2 border-mainColor overflow-hidden rounded-lg flex justify-center relative z-[1]">
+
+
+                    <button
+                        class="tracking-widest md:w-40 h-14 text-bgColor hover:text-mainColor transition duration-700 before:content-[''] before:absolute before:top-0 before:right-0 before:w-0 hover:before:w-full before:h-full before:z-[-1] before:transition-all before:duration-700 before:bg-bgColor"
+                        onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+                        Hire Me
+                    </button>
+
+                </div>
+
+                <div
+                    class="bg-transparent border-2 border-mainColor overflow-hidden rounded-lg flex justify-center relative z-[1]">
+                    <button
+                        class="tracking-widest md:w-40 h-14 text-mainColor hover:text-bgColor transition duration-700 before:content-[''] before:absolute before:top-0 before:left-0 before:w-0 hover:before:w-full before:h-full before:z-[-1] before:transition-all before:duration-700 before:bg-mainColor"
+                        onclick="redirectToWhatsApp()">
+                        Let's Talk
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- SOCIAL MEDIA -->
+        <div class="absolute bottom-8 md:bottom-20 flex gap-5 z-10 social-icons">
+            <button
+                class="z-[1] relative overflow-hidden text-mainColor border-2 border-mainColor rounded-full text-2xl"
+                onclick="redirectToLinkedIn()">
+                <div
+                    class="before:z-[-1] md:w-14 md:h-14 w-10 h-10 before:absolute before:top-0 before:left-0 before:bg-mainColor before:w-0 hover:before:w-full before:h-full flex items-center justify-center hover:text-bgColor transition duration-700 before:transition-all before:duration-700">
+                    <i class='bx bxl-linkedin' style="color: #0ef;"></i>
+                </div>
+            </button>
+
+
+            <button
+                class="z-[1] relative overflow-hidden text-mainColor border-2 border-mainColor rounded-full text-2xl"
+                onclick="redirectToGitHub()">
+                <div
+                    class="before:z-[-1] md:w-14 md:h-14 w-10 h-10 before:absolute before:top-0 before:left-0 before:bg-mainColor before:w-0 hover:before:w-full before:h-full flex items-center justify-center hover:text-bgColor transition duration-700 before:transition-all before:duration-700">
+                    <i class='bx bxl-github' style="color: #0ef;"></i>
+                </div>
+            </button>
+
+
+            <button
+                class="z-[1] relative overflow-hidden text-mainColor border-2 border-mainColor rounded-full text-2xl"
+                onclick="redirectToMusicPage()">
+                <div
+                    class="before:z-[-1] md:w-14 md:h-14 w-10 h-10 before:absolute before:top-0 before:left-0 before:bg-mainColor before:w-0 hover:before:w-full before:h-full flex items-center justify-center hover:text-bgColor transition duration-700 before:transition-all before:duration-700">
+                    <i class='bx bxs-music' style="color: #0ef;"></i>
+                </div>
+            </button>
+
+
+            <button
+                class="z-[1] relative overflow-hidden text-mainColor border-2 border-mainColor rounded-full text-2xl"
+                onclick="downloadCV()">
+                <div
+                    class="before:z-[-1] md:w-14 md:h-14 w-10 h-10 before:absolute before:top-0 before:left-0 before:bg-mainColor before:w-0 hover:before:w-full before:h-full flex items-center justify-center hover:text-bgColor transition duration-700 before:transition-all before:duration-700">
+                    <i class='bx bxs-file-pdf' style="color: #0ef;"></i> <!-- PDF Icon -->
+                </div>
+            </button>
+
+            <button
+                class="z-[1] relative overflow-hidden text-mainColor border-2 border-mainColor rounded-full text-2xl"
+                onclick="redirectToInstagram()">
+                <div
+                    class="before:z-[-1] md:w-14 md:h-14 w-10 h-10 before:absolute before:top-0 before:left-0 before:bg-mainColor before:w-0 hover:before:w-full before:h-full flex items-center justify-center hover:text-bgColor transition duration-700 before:transition-all before:duration-700">
+                    <i class='bx bxl-instagram' style="color: #0ef;"></i>
+                </div>
+            </button>
+        </div>
+        <div class="transition-all duration-1000 w-full h-screen absolute right-0"></div>
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="min-h-screen px-5 md:px-24 flex flex-col items-center justify-center gap-6 py-32">
+
+        <br>
+        <h2>
+            <span class="keyword">System</span><span class="property">.out</span><span class="method">.println</span>(
+            <span class="string">"</span>
+            <span class="scroll-container">
+                <span class="scroll-text" style="color:#ba1057;">! Dev Life</span>
+                <span class="scroll-text" style="color:#f39c12;">! Dev Matrix</span>
+                <span class="scroll-text" style="color:#2ecc71;">! Code Forge</span>
+                <span class="scroll-text" style="color:#e74c3c;">! Data Magic</span>
+                <span class="scroll-text" style="color:#3498db;">! Bug Hunter</span>
+            </span>
+            <span class="string">"</span>);
+        </h2>
+        <!-- About Image -->
+        <figure class="about-image-wrapper">
+            <img src="images/about.jpg" alt="About" class="about-image">
+            <span class="about-image-border"></span>
+        </figure>
+        <br>
+        <div class="text-center flex flex-col items-center">
+            <h3 class="font-semibold text-2xl mb-4 text-white">
+                Service <span style="color: #3498db;">Spectrum</span>
+            </h3>
+        </div>
+        <br>
+
+        <div class="wrapper">
+            <div class="cols">
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url(images/card/frontend.png)">
+                            <div class="inner">
+                                <p id="back">Front-End</p>
+                                <span class="service">Service</span>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p class="ptag">
+                                    Innovative Frontend Developer building scalable user experiences with
+                                    <span class="hl">HTML5</span>, <span class="hl">CSS3</span>,
+                                    <span class="hl">JavaScript (ES6+)</span>, and
+                                    <span class="hl">React.js</span>, focusing on
+                                    <span class="hl">performance</span>, <span class="hl">UI/UX</span>, and
+                                    <span class="hl">modern frameworks</span>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url(images/card/backend.png)">
+                            <div class="inner">
+                                <p id="back">Back-End</p>
+                                <span class="service">Service</span>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p class="ptag">
+                                    Java Backend Engineer delivering robust solutions with
+                                    <span class="hl">Java 8</span>, <span class="hl">Spring Boot</span>,
+                                    <span class="hl">Microservices</span>, and <span class="hl">Kafka-Zookeeper</span>,
+                                    focusing on <span class="hl">scalability, Rest API</span>,
+                                    <span class="hl">concurrency</span>, and <span class="hl">system design</span>.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url(images/card/Database.png)">
+                            <div class="inner">
+                                <p id="back">Database & Cloud</p>
+                                <span class="service">Service</span>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p class="ptag">
+                                    Proficient with SQL based<span class="hl">MySQL</span>, <span
+                                        class="hl">PostgreSQL</span>,
+                                    <span class="hl">MongoDB</span>, leveraging cloud ecosystems
+                                    <span class="hl">NonSQL</span>, <span class="hl">AWS</span>,
+                                    <span class="hl">DigitalOcean</span>, <span class="hl">Railway</span>,
+                                    to enable <span class="hl">scalable</span> and
+                                    <span class="hl">secure infrastructures</span>.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url(images/card/devops.png)">
+                            <div class="inner">
+                                <p id="back">DevOps</p>
+                                <span class="service">Tools</span>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p class="ptag">
+                                    Proficient in <span class="hl">Docker</span>, <span class="hl">Kubernetes</span>,
+                                    <span class="hl">GitHub</span>, <span class="hl">Swagger UI</span>,
+                                    <span class="hl">Postman</span>, and <span class="hl">Jenkins</span>,
+                                    enabling <span class="hl">containerized</span> deployments,
+                                    <span class="hl">orchestrated</span> workflows,
+                                    and <span class="hl">CI/CD automation</span>.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Read More Button -->
+        <div
+            class="bg-mainColor border-2 border-mainColor overflow-hidden rounded-lg flex justify-center relative z-[1] w-40 h-14 mt-6">
+            <button class="tracking-widest w-40 h-14 font-semibold text-lg text-bgColor hover:text-mainColor transition duration-700 
+      before:content-[''] before:absolute before:top-0 before:right-0 before:w-0 hover:before:w-full 
+      before:h-full before:z-[-1] before:transition-all before:duration-700 before:bg-bgColor"
+                onclick="redirectToGitHub()">
+                Read More
+            </button>
+        </div>
+    </section>
+
+
+    <!--EDUCATION SECTION-->
+    <section id="education" class="min-h-screen flex flex-col justify-center md:px-24 my-31">
+        <div class="patterns">
+            <svg width="100%" height="100%" class="svgs">
+                <defs>
+                    <pattern id="polka-dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <circle fill="#be9ddf" cx="25" cy="25" r="3"></circle>
+                    </pattern>
+                </defs>
+
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"> </rect>
+
+
+                4
+                <text x="50%" y="60%" text-anchor="middle">
+                    CAREER SNAPSHOT
+                </text>
+            </svg>
+        </div>
+
+
+        <div class="flex flex-col md:flex-row mb-[-7%]">
+            <div class="scale-[80%] ">
+                <h3 class="font-bold text-3xl mb-5 indent-10 text-mainColor">Education</h3>
+
+                <!--BOX-->
+                <div class="border-l-2 border-mainColor relative">
+
+                    <!--EDUCATION CONTENT-->
+                    <div
+                        class="ml-7 before:content-[''] before:absolute before:-left-2.5 before:w-5 before:h-5 before:rounded-full before:bg-mainColor">
+                        <div class="relative overflow-hidden border-2 border-mainColor p-3 mb-5 rounded-lg">
+                            <!--CONTENT-->
+                            <div
+                                class="before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-bgSecondColor before:w-0 hover:before:w-full before:transition-all before:duration-700 before:h-full">
+                                <!--YEAR-->
+                                <div class="text-xl text-mainColor mb-2">
+                                    <i class='mr-2 bx bxs-calendar'></i> 2021 - 2025
+                                </div>
+                                <h3 class="font-semibold text-2xl text-mainColor">Bachelor of Technology (B.Tech) CSE -
+                                    Dr. A.P.J. Abdul Kalam Technical University</h3>
+
+                                <p class="text-lg mt-2">
+                                    As a CSE student, I am focused on building a strong foundation in computer science,
+                                    programming, and software engineering. This program enhances my skills in
+                                    problem-solving, data structures, and algorithms—essential for a career in tech.
+                                    Through hands-on projects and an industry-aligned curriculum, I am gaining practical
+                                    experience to meet the demands of modern software development. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--EDUCATION CONTENT-->
+                    <div
+                        class="ml-7 before:content-[''] before:absolute before:-left-2.5 before:w-5 before:h-5 before:rounded-full before:bg-mainColor">
+                        <div class="relative overflow-hidden border-2 border-mainColor p-3 mb-5 rounded-lg">
+
+                            <!--CONTENT-->
+                            <div
+                                class="before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-bgSecondColor before:w-0 hover:before:w-full before:transition-all before:duration-700 before:h-full">
+
+                                <!--YEAR-->
+                                <div class="text-xl text-mainColor mb-2">
+                                    <i class='mr-2 bx bxs-calendar'></i> 2019- 2021
+                                </div>
+                                <h3 class="font-semibold text-2xl text-mainColor">Electronics and Telicommunication -
+                                    Board of Technical Education Lucknow</h3>
+                                <p class="text-lg mt-2">
+                                    Studying Electronics and Telecommunication at the Board of Technical Education,
+                                    Lucknow, I developed a solid understanding of electronic systems and communication
+                                    technologies. This education equipped me with essential skills in circuit analysis,
+                                    digital communication, and signal processing, which are valuable for roles in the
+                                    electronics and telecom industries. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--EDUCATION CONTENT-->
+                    <div
+                        class="ml-7 before:content-[''] before:absolute before:-left-2.5 before:w-5 before:h-5 before:rounded-full before:bg-mainColor">
+                        <div class="relative overflow-hidden border-2 border-mainColor p-3 mb-5 rounded-lg">
+
+                            <!--CONTENT-->
+                            <div
+                                class="before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-bgSecondColor before:w-0 hover:before:w-full before:transition-all before:duration-700 before:h-full">
+
+                                <!--YEAR-->
+                                <div class="text-xl text-mainColor mb-2">
+                                    <i class='mr-2 bx bxs-calendar'></i>2017 - 2019
+                                </div>
+                                <h3 class="font-semibold text-2xl text-mainColor">10th || 12th PCM with Honors - Uttar
+                                    Pradesh Board </h3>
+                                <p class="text-lg mt-2">
+                                    Completed 12th and 10th grade with a focus on Physics, Chemistry, and Mathematics
+                                    (PCM) under the Uttar Pradesh Board with Honors in the 2017-2019 academic year.
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="scale-[80%]">
+                <h3 class="font-bold text-3xl mb-5 indent-10 text-mainColor">Experience</h3>
+
+                <!--BOX-->
+                <div class="border-l-2 border-mainColor relative">
+
+                    <!--EXPERIENCE CONTENT-->
+                    <div
+                        class="ml-7 before:content-[''] before:absolute before:-left-2.5 before:w-5 before:h-5 before:rounded-full before:bg-mainColor">
+                        <div class="relative overflow-hidden border-2 border-mainColor p-3 mb-5 rounded-lg">
+
+                            <!--CONTENT-->
+                            <div
+                                class="before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-bgSecondColor before:w-0 hover:before:w-full before:transition-all before:duration-700 before:h-full">
+
+                                <!--YEAR-->
+                                <div class="text-xl text-mainColor mb-2">
+                                    <i class='mr-2 bx bxs-calendar'></i>2024 | Present
+                                </div>
+                                <h4 class="font-semibold text-2xl text-mainColor">Java FullStack Developer - IT
+                                    Solutions
+
+                                </h4>
+                                <p class="text-lg mt-1">
+                                    In my role as a Java Backend Developer in the IT industry, I specialize in
+                                    problem-solving, validation, and exception handling. I work to create efficient,
+                                    reliable backend systems that support scalable applications and optimize data
+                                    management
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="ml-7 before:content-[''] before:absolute before:-left-2.5 before:w-5 before:h-5 before:rounded-full before:bg-mainColor">
+
+                        <!--EXPERIENCE CONTENT-->
+                        <div class="relative overflow-hidden border-2 border-mainColor p-3 mb-5 rounded-lg">
+
+                            <!--CONTENT-->
+                            <div
+                                class="before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-bgSecondColor before:w-0 hover:before:w-full before:transition-all before:duration-700 before:h-full">
+
+                                <!--YEAR-->
+                                <div class="text-xl text-mainColor mb-2">
+                                    <i class='mr-2 bx bxs-calendar'></i> 2023 || 6 Month Intern
+                                </div>
+                                <h3 class="font-semibold text-2xl text-mainColor">Java Developer - Paytel Financial
+                                    Pvt.Ltd</h3>
+                                <p class="text-lg mt-2">
+                                    A 6-month internship as a Java Developer at Paytel Financial Pvt. Ltd., gaining
+                                    hands-on experience in Java development, focusing on backend solutions, and
+                                    enhancing coding skills for financial applications. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="ml-7 before:content-[''] before:absolute before:-left-2.5 before:w-5 before:h-5 before:rounded-full before:bg-mainColor">
+
+                        <!--EXPERIENCE CONTENT-->
+                        <div class="relative overflow-hidden border-2 border-mainColor p-3 mb-5 rounded-lg">
+
+                            <!--CONTENT-->
+                            <div
+                                class="before:absolute before:top-0 before:left-0 before:z-[-1] before:bg-bgSecondColor before:w-0 hover:before:w-full before:transition-all before:duration-700 before:h-full">
+
+                                <!--YEAR-->
+                                <div class="text-xl text-mainColor mb-2">
+                                    <i class='mr-2 bx bxs-calendar'></i> 2023 || 8 Month Training Java FullStack
+                                    Developer
+                                </div>
+                                <h3 class="font-semibold text-2xl text-mainColor">Java FullStack Developer - Ducat The
+                                    IT School</h3>
+                                <p class="text-lg mt-2">
+                                    Completed an 8-month Java FullStack Developer training at Ducat The IT School,
+                                    gaining expertise in frontend (HTML, CSS, JavaScript) and backend (Java, Spring
+                                    Boot, REST APIs, databases) for robust web applications. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!--SKILLS SECTION-->
+    <section id="skills" class="min-h-screen  w-full flex flex-col justify-center px-5 md:px-24 py-32"
+        style="background-color: #061521;">
+        <div id="spotlight">
+            <svg viewBox="0 0 1200 300" class="spotlight-svg">
+                <!-- Define text as a symbol -->
+                <symbol id="s-text">
+                    <text x="50%" y="50%" dy=".35em" text-anchor="middle">DOMAIN EXPERTISE</text>
+                </symbol>
+
+                <!-- Reuse the symbol multiple times with different strokes -->
+                <use xlink:href="#s-text" class="spotlight-text"></use>
+                <use xlink:href="#s-text" class="spotlight-text"></use>
+                <use xlink:href="#s-text" class="spotlight-text"></use>
+                <use xlink:href="#s-text" class="spotlight-text"></use>
+                <use xlink:href="#s-text" class="spotlight-text"></use>
+            </svg>
+        </div>
+        <br>
+        <!--ROW-->
+        <div class="flex flex-col md:flex-row justify-center gap-20">
+
+            <!--COLUMN-->
+            <div class="w-full">
+                <h3 class="font-semibold text-2xl mb-5 text-mainColor">Frontend Skills</h3>
+
+                <!--BOX-->
+                <div
+                    class="border-2 border-mainColor rounded-lg px-5 py-5 flex flex-col justify-center w-full relative overflow-hidden z-10">
+
+                    <!--CONTENT-->
+                    <div
+                        class="before:content-[''] before:absolute before:top-0 before:left-0  before:w-0 before:h-full hover:before:w-full before:transition-all before:duration-700 before:bg-bgColor before:-z-10">
+
+                        <!--HTML-->
+                        <!--PROGRESS-->
+                        <div class="mb-7">
+                            <h6 class="font-thin text-lg flex justify-between">
+                                HTML5 <i class='bx bxl-html5 text-mainColor'></i>
+
+                            </h6>
+
+                            <!--BAR-->
+                            <div class="border-2 border-mainColor h-6 rounded-md mt-2 p-1">
+                                <span class="block h-full w-[95%] rounded-[.3rem] bg-mainColor"></span>
+                            </div>
+                        </div>
+
+                        <!--CSS-->
+                        <!--PROGRESS-->
+                        <div class="mb-7">
+                            <h6 class="font-thin text-lg flex justify-between">
+                                CSS3 <span></span><i class='bx bxl-css3 text-mainColor'></i>
+                            </h6>
+
+                            <!--BAR-->
+                            <div class="border-2 border-mainColor h-6 rounded-md mt-2 p-1">
+                                <span class="block h-full w-[90%] rounded-[.3rem] bg-mainColor"></span>
+                            </div>
+                        </div>
+
+                        <!--JavaScript-->
+                        <!--PROGRESS-->
+                        <div class="mb-7">
+                            <h6 class="font-thin text-lg flex justify-between">
+                                JavaScript(ES6) <span></span><i class='bx bxl-javascript text-mainColor'></i>
+                            </h6>
+
+                            <!--BAR-->
+                            <div class="border-2 border-mainColor h-6 rounded-md mt-2 p-1">
+                                <span class="block h-full w-[90%] rounded-[.3rem] bg-mainColor"></span>
+                            </div>
+                        </div>
+                        <!--PROGRESS-->
+                        <div class="mb-7">
+                            <h6 class="font-thin text-lg flex justify-between ">
+                                React JS<span></span><i class='bx bxl-react js text-mainColor'></i>
+                            </h6>
+
+                            <!--BAR-->
+                            <div class="border-2 border-mainColor h-6 rounded-md mt-2 p-1">
+                                <span class="block h-full w-[90%] rounded-[.3rem] bg-mainColor"></span>
+                            </div>
+                        </div>
+
+
+                        <!--PROGRESS-->
+                        <div class="">
+                            <h6 class="font-thin text-lg flex justify-between ">
+                                Angular Js <span></span><i class='bx bxl-angular js text-mainColor'></i>
+                            </h6>
+
+                            <!--BAR-->
+                            <div class="border-2 border-mainColor h-6 rounded-md mt-2 p-1">
+                                <span class="block h-full w-[85%] rounded-[.3rem] bg-mainColor"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--COLUMN-->
+            <div class="w-full">
+                <h3 class="font-semibold text-2xl mb-5 text-mainColor">Back-End Skills</h3>
+
+                <!--BOX-->
+                <div
+                    class="border-2 border-mainColor rounded-lg px-5 py-5 flex flex-col justify-center relative overflow-hidden z-10">
+
+                    <!--CONTENT-->
+                    <div
+                        class="before:content-[''] before:absolute before:top-0 before:left-0  before:w-0 before:h-full hover:before:w-full before:transition-all before:duration-700  before:bg-bgColor before:-z-10">
+
+                        <!--Web Design-->
+                        <!--PROGRESS-->
+                        <div class="mb-7">
+                            <h6 class="font-thin text-lg flex justify-between">
+                                Core Java <i class='bx bxl-java text-mainColor'></i>
+                            </h6>
+
+                            <!--BAR-->
+                            <div class="border-2 border-mainColor h-6 rounded-md mt-2 p-1" style="color: #0ef;">
+                                <span class="block h-full w-[100%] rounded-[.3rem] bg-mainColor"
+                                    style="color: #0ef;"></span>
+                            </div>
+                        </div>
+                        <div class="mb-7">
+                            <h6 class="font-thin text-lg flex justify-between">
+                                Advance Java
+                                <!-- Advanced Java (J2EE style) Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <!-- Gear (Advanced / J2EE server symbol) -->
+                                    <path d="M19.4 15.5a2.5 2.5 0 1 1-4.8 1.4 2.5 2.5 0 0 1 4.8-1.4z" stroke="#00ABF0"
+                                        stroke-width="2" fill="none" />
+                                    <path d="M18 14l.5-1 .5-1-1-1-1-.5-1 .5-.5 1v1" stroke="#00ABF0" stroke-width="2"
+                                        fill="none" />
+                                </svg>
+                            </h6>
+
+                            <!--BAR-->
+                            <div class="border-2 border-mainColor h-6 rounded-md mt-2 p-1">
+                                <span class="block h-full w-[100%] rounded-[.3rem] bg-mainColor"></span>
+                            </div>
+                        </div>
+
+                        <!--Web Development-->
+                        <!--PROGRESS-->
+                        <div class="mb-7">
+                            <h6 class="font-thin text-lg flex justify-between">
+                                Spring Boot<span></span><i class='bx bxl-spring-boot text-mainColor'></i>
+                            
+                            </h6>
+
+                            <!--BAR-->
+                            <div class="border-2 border-mainColor h-6 rounded-md mt-2 p-1">
+                                <span class="block h-full w-[100%] rounded-[.3rem] bg-mainColor"></span>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="mb-7">
+                            <h6 class="font-thin text-lg flex justify-between">
+                                Database
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    style="fill: rgba(0 171 240 );transform: ;msFilter:;">
+                                    <path
+                                        d="M20 17V7c0-2.168-3.663-4-8-4S4 4.832 4 7v10c0 2.168 3.663 4 8 4s8-1.832 8-4zM12 5c3.691 0 5.931 1.507 6 1.994C17.931 7.493 15.691 9 12 9S6.069 7.493 6 7.006C6.069 6.507 8.309 5 12 5zM6 9.607C7.479 10.454 9.637 11 12 11s4.521-.546 6-1.393v2.387c-.069.499-2.309 2.006-6 2.006s-5.931-1.507-6-2V9.607zM6 17v-2.393C7.479 15.454 9.637 16 12 16s4.521-.546 6-1.393v2.387c-.069.499-2.309 2.006-6 2.006s-5.931-1.507-6-2z">
+                                    </path>
+                                </svg>
+                            </h3>
+                            <!--BAR-->
+                            <div class="border-2 border-mainColor h-6 rounded-md mt-2 p-1">
+                                <span class="block h-full w-[100%] rounded-[.3rem] bg-mainColor"></span>
+                            </div>
+                        </div>
+
+                        <!--PROGRESS-->
+                        <div class="">
+                            <h6 class="font-thin text-lg flex justify-between">
+                              Microservice Architecture
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgba(0,171,240)" viewBox="0 0 24 24">
+                                <path d="M6 2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H6zm9 0a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-3zM6 15a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H6zm9 0a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2h-3z"/>
+                                <path d="M12 7v2M12 15v2M7 12h2M15 12h2M8 8l2 2M14 8l2 2M8 16l2-2M14 16l2-2" stroke="rgba(0,171,240)" stroke-width="1.5" fill="none"/>
+                              </svg>
+                              
+                            </h6>
+                            <!--BAR-->
+                            <div class="border-2 border-mainColor h-6 rounded-md mt-2 p-1">
+                                <span class="block h-full w-[100%] rounded-[.3rem] bg-mainColor"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--CONTACT SECTION-->
+    <section id="contact" class="min-h-screen flex flex-col justify-center items-center px-5 md:px-24">
+        <div id="spotlight-2">
+            <svg viewBox="0 0 1200 300" class="spotlight-svg">
+              <symbol id="s-text-2">
+                <text x="50%" y="50%" dy=".35em" text-anchor="middle">CONNECT WITH US</text>
+              </symbol>
+          
+              <use xlink:href="#s-text-2" class="spotlight-text"></use>
+              <use xlink:href="#s-text-2" class="spotlight-text"></use>
+              <use xlink:href="#s-text-2" class="spotlight-text"></use>
+              <use xlink:href="#s-text-2" class="spotlight-text"></use>
+              <use xlink:href="#s-text-2" class="spotlight-text"></use>
+            </svg>
+          </div>
+        <div class="contact-container">
+   
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <div class="contact-title">
+                    <h2 id="consultation-heading">
+
+                        Schedule a <span class="highlight">Free Java Strategy Session</span>
+                      </h2>
+                      
+                </div>
+                <div class="alert-warning" id="alertWarning" style="display: none;">
+                    <span class="warning-icon">⚠️</span>
+                    <span class="warning-text" style="color: rgb(23, 162, 184);">
+                        <span style="color: yellow; background: transparent;"> Please :</span> Ensure Manual Typing
+                        
+                    </span>
+                </div>
+
+                <input type="hidden" name="access_key" value="6928cbe1-bf6f-4cb5-a793-fa6e31b1f56c">
+
+                <div class="form-group">
+                    <input type="text" name="first_name" placeholder="First Name" class="contact-input" required 
+                           pattern="^[A-Za-z]{2,30}$" 
+                           title="First name should contain only letters (2–50 characters)">
+                           
+                    <input type="text" name="last_name" placeholder="Last Name" class="contact-input"
+                           pattern="^[A-Za-z]{2,30}$" 
+                           title="Last name should contain only letters (2–50 characters)" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <input type="tel" name="mobile_number" 
+                         placeholder="Enter mobile number" 
+                         class="contact-input" required
+                             pattern="^[0-9]{7,15}$"
+                        title="Enter digits only (7 to 15 numbers)">
+
+                  
+                    <input type="email" name="email" placeholder="Email Address" class="contact-input" required
+                           pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|outlook\.com|[a-zA-Z0-9.-]+\.com)$"
+                           title="Enter a valid email ending with gmail.com, outlook.com, or other .com domains">
+                  </div>
+                  
+                  <textarea name="message" class="contact-input message-input" placeholder="Your Message"
+                            required minlength="5"
+                            title="Message must be at least 5 characters"></textarea>
+                  
+
+                <div class="bg-mainColor border-2 border-mainColor overflow-hidden rounded-lg flex justify-center relative z-[1] w-40 h-14"
+                    style="margin-left: 35%; /* Adjust based on your need */">
+                    <button type="submit"
+                        class="tracking-widest w-40 h-14 font-semibold text-lg text-bgColor hover:text-mainColor transition duration-700 before:content-[''] before:absolute before:top-0 before:right-0 before:w-0 hover:before:w-full before:h-full before:z-[-1] before:transition-all before:duration-700 before:bg-bgColor">
+                        Submit
+                    </button>
+                </div>
+
+            </form>
+
+            <div class="contact-image" id="contact-image"> 
+                <img src="images/pixelcut-export (1).png" alt="Contact Image">
+            </div>
+        </div>
+
+    </section>
+
+    <br><br>
+    <footer class="flex flex-col md:flex-row justify-between items-center gap-5 px-5 md:px-24 py-3 bg-bgSecondColor flex-wrap" id="footer">
+        <div class="flex flex-row items-center gap-8 flex-wrap w-full justify-between" id="footer-content">
+            
+            <!-- Powered by -->
+            <div class="flex items-center">
+                <p style="font-family: cursive; text-shadow: 0 0 2px #033c42, 0 0 5px #184f52, 0 0 1px #792745, 0 0 2px #ff005e, 0 0 4px #ff005e, 0 0 8px #750f34; font-size: x-small;">
+                    Powered by Tailwind CSS
+                </p>
+            </div>
+    
+            <!-- Center Text -->
+            <div class="flex items-center text-sm text-gray-400 flex-wrap" 
+                 style="font-size: smaller; font-family: Verdana, Arial, Helvetica, sans-serif;">
+                <p class="text-gray-50 text-thin">
+                    This site is protected by the  
+                    <a href="https://policies.google.com/privacy" target="_blank" class="text-gray-700 hover:underline">Google Privacy Policy</a> and 
+                    <a href="https://policies.google.com/terms" target="_blank" class="text-gray-700 hover:underline">Terms of Service</a> apply. 
+                    © <span id="currentYear"></span>
+                    &nbsp;&nbsp;&nbsp; <span>Desktop version recommended for best experience</span>
+                </p>
+            </div>
+    
+            <!-- Social Icons -->
+            <div class="flex items-center gap-5">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sujeetprajap02@gmail.com" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=38159&format=png&color=22C3E6" alt="Gmail" style="width:23px;height:23px;">
+                </a>
+                <a href="https://github.com/sujeet-dev-io" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=zehXPLJSAbBB&format=png&color=22C3E6" alt="GitHub" style="width:24px;height:24px;">
+                </a>
+                <a href="https://www.linkedin.com/in/sujeet-prajapati-145b2624a/" target="_blank">
+                    <img src="https://img.icons8.com/?size=100&id=kGCRpQr6bnW8&format=png&color=22C3E6" alt="LinkedIn" style="width:30px;height:30px;">
+                </a>
+                <a href="https://wa.me/918303223251?text=Hello%2C%20I%20saw%20your%20profile%20and%20would%20like%20to%20connect%21" target="_blank">
+                    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" 
+                         alt="WhatsApp" 
+                         style="width:22px;height:22px; color: #0ef;">
+                  </a>
+                  
+            </div>
+        </div>
+    
+        <!-- Scroll to Top Button -->
+        <div class="bg-mainColor flex justify-center border-2 border-mainColor rounded-lg text-bgColor text-2xl relative overflow-hidden z-10">
+            <a class="before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-0 hover:before:h-full before:transition-all before:duration-700 before:bg-bgSecondColor before:-z-10"
+                href="#home">
+                <i class='bx bx-up-arrow-alt p-3 hover:text-mainColor transition duration-70'></i>
+            </a>
+        </div>
+    
+        <!-- Dynamic Year Script -->
+        <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</body>
+
+</html>

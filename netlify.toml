@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+  command = "npm run build:css"
+
+[dev]
+  framework = "#custom"
+  command = "npm run dev:css"
+  port = 3000
+  targetPort = 3000
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
