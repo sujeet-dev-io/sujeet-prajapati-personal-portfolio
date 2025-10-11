@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // Check if video already exists
     if (!home.querySelector("video.bg-video")) {
       const video = document.createElement("video");
-      video.src = "../Video/b10.mp4";
+      video.src = "video/b.mp4";
       video.autoplay = true;
       video.loop = true;
       video.muted = true;
@@ -100,7 +100,6 @@ window.addEventListener("DOMContentLoaded", () => {
         setTimeout(loop, 2000); // delay between animations
       });
     }
-  
     loop();
   });
   

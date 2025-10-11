@@ -74,7 +74,8 @@
 
     @media (max-width: 768px) {
       #home {
-        background: url('../images/person-wearing-high-tech-ar-headset-surrounded-by-bright-blue-neon-colors.jpg') no-repeat center center;
+        background: url('images/responsivehome.jpg') no-repeat center center;
+
         background-size: cover;
         text-decoration-color: #00abf0;
       }
